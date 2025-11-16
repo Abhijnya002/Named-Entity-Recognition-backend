@@ -1,0 +1,5 @@
+biobert_trained/
+*.pyc
+__pycache__/
+.DS_Store
+upload.py
