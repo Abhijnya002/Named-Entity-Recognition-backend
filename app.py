@@ -5,7 +5,15 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "https://ner-hs5bnquov-abhis-projects-2c75f009.vercel.app",
+            "http://localhost:3000"
+        ]
+    }
+})
+
 
 MODEL_PATH = "abhij017/biobert-medical-ner"
 
